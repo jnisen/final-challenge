@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+
+.main {
+  width: 90%;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.primary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  .section-title {
+    color: v.$element;
+  }
+
+  .section-paragraph {
+    text-align: left;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  
+  .sidebar__item {
+    background-color: v.$section;
+    color: v.$secondary;
+    padding: 3rem 1rem;
+  }
+  .sidebar-title {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+}
