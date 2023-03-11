@@ -18,5 +18,5 @@
 // toRem
 
 @function toRem($val) {
-  @return math.div($val, 16) + 'rem';
+  @return math.div($val, 16) + rem;
 }

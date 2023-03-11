@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+
+.first {
+  background-color: v.$primary;
+  padding: 3rem 0 3rem 0;
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.col {
+  &__title {
+    color: v.$secondary;
+    font-size: 2.5rem;
+    &--words {
+      color: v.$element;
+      display: block;
+    }
+  }
+  &__text {
+    color: v.$secondary;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  &__btn {
+    background-color: v.$element;
+    border-radius: 100px;
+    font-weight: 900;
+    padding: 0.5em;
+    color: v.$secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.3em;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
