@@ -1,28 +1,54 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
 
 .first {
-  background-color: v.$primary;
+  background-color: v.$section;
   padding: 3rem 0;
   text-align: center;
 }
 
 .row {
   width: 100%;
-  margin-top: 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @include m.tablet {
+    flex-direction: row;
+  }
 }
 
 .col {
+  &__first {
+    @include m.tablet {
+      text-align: left;
+      width: 50%;
+    }
+  }
+
+  &__second {
+    @include m.tablet {
+      align-self: flex-end;
+      text-align: left;
+      width: 35%;
+    }
+  }
+
   &__title {
     color: v.$secondary;
     font-size: 2.5rem;
+
+    @include m.tablet {
+      font-size: 4rem;
+    }
+
     &--words {
       color: v.$element;
       display: block;
     }
   }
+
   &__text {
     color: v.$secondary;
     font-size: 1.3rem;
