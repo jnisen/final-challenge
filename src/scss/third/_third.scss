@@ -26,12 +26,13 @@
   gap: 1rem;
   text-align: center;
   margin: 0 auto;
-  
+
   .sidebar__item {
     background-color: v.$section;
     color: v.$secondary;
     padding: 3rem 1rem;
   }
+
   .sidebar-title {
     margin-bottom: 2rem;
     font-size: 1.5rem;
