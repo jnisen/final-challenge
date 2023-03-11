@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+
+.header {
+  background-color: v.$nav;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.nav {
+  width: 100%;
+
+  &__list {
+    margin-top: 1.5rem;
+
+    &__primary {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    margin-top: 0.75rem;
+
+    &--btn {
+      display: inline-block;
+      background-color: v.$element;
+      border-radius: 100px;
+      font-weight: 900;
+      padding: 0.5em;
+    }
+
+    &__link {
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      opacity: 0.7;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+}
