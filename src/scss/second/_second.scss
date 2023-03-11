@@ -1,0 +1,25 @@
+@use 'base/variables' as v;
+
+.second {
+  background-color: rgb(245, 244, 244);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.row {
+  width: 100%;
+}
+
+.col {
+  &__t {
+    color: v.$element;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+}
