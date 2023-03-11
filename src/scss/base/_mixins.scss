@@ -1,0 +1,22 @@
+@use 'variables' as v;
+@use 'sass:math';
+
+// Breakpoints
+
+@mixin tablet {
+  @media (min-width: v.$medium-screen) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$large-screen) {
+    @content;
+  }
+}
+
+// toRem
+
+@function toRem($val) {
+  @return math.div($val, 16) + 'rem';
+}
