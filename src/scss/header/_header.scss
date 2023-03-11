@@ -1,35 +1,69 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
 
 .header {
   background-color: v.$nav;
   padding: 2rem 0;
   text-align: center;
 
+  @include m.tablet {
+    padding: 1rem 0;
+  }
+
   &__logo {
     height: 30px;
+
+    // @include m.tablet {
+    //   display: block;
+    //   margin: auto 1rem auto 0;
+    // }
+  }
+
+  &__row {
+    @include m.tablet {
+      display: flex;
+    }
   }
 }
 
 .nav {
   width: 100%;
+  @include m.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 
   &__list {
-    margin-top: 1.5rem;
+    padding: 0;
+    margin: 0;
+    @include m.tablet {
+      display: flex;
+      gap: 2rem;
+    }
 
-    &__primary {
-      margin-bottom: 2rem;
+    &--primary {
+      margin-bottom: 2em;
+
+      @include m.tablet {
+        margin-bottom: unset;
+        margin-right: 2rem;
+      }
     }
   }
 
   &__item {
-    margin-top: 0.75rem;
+    margin-top: 0.75em;
+
+    @include m.tablet {
+      margin-top: unset;
+    }
 
     &--btn {
-      display: inline-block;
       background-color: v.$element;
       border-radius: 100px;
       font-weight: 900;
-      padding: 0.5em;
+      padding: 0.3em;
     }
 
     &__link {
